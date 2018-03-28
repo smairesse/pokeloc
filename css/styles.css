@@ -1,0 +1,132 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	background-color: rgb(67, 123, 12);
+	margin: 0;
+	text-align: center;
+}
+
+/* DIV */
+
+#success {
+	position: absolute;
+	margin: auto;
+	top: 15%;
+	right: 0;
+	bottom: auto;
+	left: 0;
+	height: 17%;
+	width: auto;
+	background-color: rgb(67, 123, 12);
+	border-radius: 3px;
+	visibility: hidden;
+}
+
+#marker {
+	position: absolute;
+	margin: auto;
+	top: 45%;
+	right: 0;
+	bottom: auto;
+	left: 0;
+	height: 17%;
+	width: auto;
+	background-color: rgb(67, 123, 12);
+	border-radius: 3px;
+	visibility: hidden;
+}
+
+#alert {
+	position: absolute;
+	margin: auto;
+	top: 37%;
+	right: 0;
+	bottom: auto;
+	left: 0;
+	height: 0px;
+	width: auto;
+	background-color: rgb(67, 123, 12);
+	border-radius: 3px;
+	visibility: hidden;
+	max-width: 100%;
+}
+
+#loader {
+	position: absolute;
+	margin: auto;
+	top: 37%;
+	right: 0;
+	bottom: auto;
+	left: 0;
+	height: 10%;
+	width: auto;
+	background-color: rgb(67, 123, 12);
+	border-radius: 3px;
+	visibility: hidden;
+	max-width: 100%;
+}
+
+#buttons {
+	position: absolute;
+	margin: auto;
+	top: 10px;
+	right: 10px;
+	bottom: auto;
+	left: auto;
+	height: 5%;
+	width: auto;
+	background-color: rgb(67, 123, 12);
+	border-radius: 3px;
+}
+
+footer {
+	position: absolute;
+	margin: auto;
+	top: auto;
+	right: 0;
+	bottom: 10%;
+	left: 0;
+	width: auto;
+	height: 17%;
+	background-color: rgb(67, 123, 12);
+	border-radius: 3px;
+	visibility: hidden;
+}
+
+/* Feature */
+
+#message {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: large;
+	border: none;
+	border-radius: 10px;
+	background:rgba(0,0,0, 0.1);
+	color: white;
+}
+
+img {
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	background-color: rgb(67, 123, 12);
+}
+
+/* Buttons bar */
+
+#locate, #clipboard, #gotomap {
+	visibility: hidden;
+}
+
+.btn-min {
+	background-color: #ddd;
+	border-radius: 50%;
+	display: block;
+	margin: 10px;
+}
+
+.btn:hover {
+	cursor: pointer;
+}
