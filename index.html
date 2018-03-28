@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-language" content="fr-FR" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Pokeloc</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+	
+    <script src="js/clipboard-2.0.0.js"></script>
+	
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<header id="container"></header>
+	
+	<section id="success">
+		<img src="images/success.png">
+	</section>
+	
+	<section id="marker">
+		<a href="#" id="map" class="btn tooltip" data-title="see on Google map"><img src="images/marker.png"></a>
+	</section>
+	
+	<section id="loader">
+		<img src="images/loader.gif">
+	</section>
+	
+	<section id="alert"><div><span id="message"></span></div></section>
+	
+	<section id="buttons">
+		<a id="locate" href="javascript:getLocalisation()" class="btn"><img class="btn-min" src="images/locate.png"></a>
+		<a id="clipboard" href="#" class="btn cp" data-title="copy to clipboard" data-clipboard-text=""><img class="btn-min" src="images/copy.png"></a>
+		<a id="gotomap" href="#" class="btn"><img class="btn-min" src="images/map.png"></a>
+	</section>
+	
+	<footer id="submit">
+		<a href="javascript:getLocalisation()" class="btn tooltip" data-title="get location"><img src="images/pokeball.png"></a>
+	</footer>
+
+</body>
+</html>
+
+<script src="js/scripts.js"></script>
