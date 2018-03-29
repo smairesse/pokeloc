@@ -6,6 +6,10 @@ html, body {
 	text-align: center;
 }
 
+a {
+	decoration: none;
+}
+
 /* DIV */
 
 #success {
@@ -111,12 +115,12 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 	height: 100%;
-	background-color: rgb(67, 123, 12);
+	background-color: none;
 }
 
 /* Buttons bar */
 
-#locate, #clipboard, #gotomap {
+#locate, #clipboard, #gotomap, #whatsapp {
 	visibility: hidden;
 }
 
