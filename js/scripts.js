@@ -12,6 +12,7 @@ function init() {
 	document.getElementById("success").style.visibility = "hidden";
 	document.getElementById("clipboard").style.visibility = "hidden";
 	document.getElementById("gotomap").style.visibility = "hidden";
+	document.getElementById("whatsapp").style.visibility = "hidden";
 	document.getElementById("locate").style.visibility = "visible";
 	document.getElementById("submit").style.visibility = "visible";
 }
@@ -45,6 +46,10 @@ function success(position) {
 	document.getElementById("gotomap").href='https://www.google.fr/maps/?q=' + position.coords.latitude + ',' + position.coords.longitude;
 	document.getElementById("marker").style.visibility = "visible";
 	document.getElementById("gotomap").style.visibility = "visible";
+	// Set whatsapp
+	var text = encodeURIComponent('https://www.google.fr/maps/?q=' + position.coords.latitude + ',' + position.coords.longitude);
+	document.getElementById("whatsapp").href='https://api.whatsapp.com/send?text=' + text;;
+	document.getElementById("whatsapp").style.visibility = "visible";
 }
 
 /*
@@ -95,14 +100,18 @@ if (navigator.geolocation) {
 
 var clipboard = new ClipboardJS('.cp');
 
-/* Debug
+
 clipboard.on('success', function(e) {
-    console.info('Action: ', e.action);
-	console.info('Text: ', e.text);
-	console.info('Trigger: ', e.trigger);
+	var node = document.getElementById("message");
+	node.innerHTML = "copied !";
+	node.style.visibility = "visible";
+    //console.info('Action: ', e.action);
+	//console.info('Text: ', e.text);
+	//console.info('Trigger: ', e.trigger);
     e.clearSelection();
 });
 
+/*
 clipboard.on('error', function(e) {
     console.error('Action: ', e.action);
 	console.error('Trigger: ', e.trigger);
