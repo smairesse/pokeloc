@@ -134,7 +134,7 @@ img {
 	position: absolute;
     background-color: none;
 	top: 20%;
-	left: 10%;
+	left: -80%;
 	visibility: hidden;
 }
 
@@ -142,7 +142,7 @@ img {
 	position: absolute;
     background-color: none;
 	top: 20%;
-	left: 90%;
+	left: 80%;
 	visibility: hidden;
 }
 
