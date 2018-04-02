@@ -142,7 +142,7 @@ img {
 	position: absolute;
     background-color: none;
 	top: 20%;
-	left: calc(40% - 5vh);
+	left: calc(30% - 5vh);
 	visibility: hidden;
 }
 
@@ -150,7 +150,7 @@ img {
 	position: absolute;
     background-color: none;
 	top: 20%;
-	left: calc(60% - 5vh);
+	left: calc(70% - 5vh);
 	visibility: hidden;
 }
 
