@@ -9,11 +9,9 @@ function init() {
 	document.getElementById("loader").style.visibility = "hidden";
 	document.getElementById("message").style.visibility = "hidden";
 	document.getElementById("marker").style.visibility = "hidden";
-	document.getElementById("success").style.visibility = "hidden";
-	document.getElementById("clipboard").style.visibility = "hidden";
-	document.getElementById("gotomap").style.visibility = "hidden";
-	document.getElementById("whatsapp").style.visibility = "hidden";
-	document.getElementById("locate").style.visibility = "visible";
+	document.getElementById("btn-copy").style.visibility = "hidden";
+	document.getElementById("btn-map").style.visibility = "hidden";
+	document.getElementById("btn-whatsapp").style.visibility = "hidden";
 	document.getElementById("submit").style.visibility = "visible";
 }
 
@@ -33,23 +31,22 @@ function getLocalisation() {															// Check if Geolocation is supported
  */
 function success(position) {
 	document.getElementById("loader").style.visibility = "hidden";
-	document.getElementById("success").style.visibility = "visible";
 	// Display coordinates
 	var node = document.getElementById("message");
 	node.innerHTML = position.coords.latitude + "," + position.coords.longitude;
 	node.style.visibility = "visible";
 	// Set clipboard
-	document.getElementById("clipboard").setAttribute("data-clipboard-text","https://www.google.fr/maps/?q=" + position.coords.latitude + "," + position.coords.longitude);
-	document.getElementById("clipboard").style.visibility = "visible";
+	document.getElementById("btn-copy").setAttribute("data-clipboard-text","https://www.google.fr/maps/?q=" + position.coords.latitude + "," + position.coords.longitude);
+	document.getElementById("btn-copy").style.visibility = "visible";
 	// Set go to Google map
 	document.getElementById("map").href='https://www.google.fr/maps/?q=' + position.coords.latitude + ',' + position.coords.longitude;
-	document.getElementById("gotomap").href='https://www.google.fr/maps/?q=' + position.coords.latitude + ',' + position.coords.longitude;
+	document.getElementById("btn-map").href='https://www.google.fr/maps/?q=' + position.coords.latitude + ',' + position.coords.longitude;
 	document.getElementById("marker").style.visibility = "visible";
-	document.getElementById("gotomap").style.visibility = "visible";
+	document.getElementById("btn-map").style.visibility = "visible";
 	// Set whatsapp
 	var text = encodeURIComponent('https://www.google.fr/maps/?q=' + position.coords.latitude + ',' + position.coords.longitude);
-	document.getElementById("whatsapp").href='https://api.whatsapp.com/send?text=' + text;;
-	document.getElementById("whatsapp").style.visibility = "visible";
+	document.getElementById("btn-whatsapp").href='https://api.whatsapp.com/send?text=' + text;
+	document.getElementById("btn-whatsapp").style.visibility = "visible";
 }
 
 /*
@@ -87,7 +84,7 @@ function fail(error) {
 // Check if Geolocation is supported
 if (navigator.geolocation) {
 	// If geolocation is available : display submit
-	document.getElementById("locate").style.visibility = "visible";	
+//	document.getElementById("btn-locate").style.visibility = "visible";	
 	document.getElementById("submit").style.visibility = "visible";	
 } else {
 	// If geolocation is not available : display error
