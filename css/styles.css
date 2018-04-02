@@ -1,3 +1,19 @@
+* {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	font-size: calc(1em * 0.625);
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	font-size: 16px;
+}
+
 html, body {
 	height: 100%;
 	width: 100%;
@@ -6,30 +22,25 @@ html, body {
 	text-align: center;
 }
 
+/*
+html {
+  font-size: 62.5%;
+  font-size: calc(1em * 0.625);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+*/
+
 a {
 	decoration: none;
 }
 
 /* DIV */
 
-#success {
-	position: absolute;
-	margin: auto;
-	top: 15%;
-	right: 0;
-	bottom: auto;
-	left: 0;
-	height: 17%;
-	width: auto;
-	background-color: rgb(67, 123, 12);
-	border-radius: 3px;
-	visibility: hidden;
-}
-
 #marker {
 	position: absolute;
 	margin: auto;
-	top: 45%;
+	top: 48%;
 	right: 0;
 	bottom: auto;
 	left: 0;
@@ -70,19 +81,6 @@ a {
 	max-width: 100%;
 }
 
-#buttons {
-	position: absolute;
-	margin: auto;
-	top: 10px;
-	right: 10px;
-	bottom: auto;
-	left: auto;
-	height: 5%;
-	width: auto;
-	background-color: rgb(67, 123, 12);
-	border-radius: 3px;
-}
-
 footer {
 	position: absolute;
 	margin: auto;
@@ -118,19 +116,62 @@ img {
 	background-color: none;
 }
 
-/* Buttons bar */
-
-#locate, #clipboard, #gotomap, #whatsapp {
-	visibility: hidden;
-}
-
-.btn-min {
-	background-color: #ddd;
-	border-radius: 50%;
-	display: block;
-	margin: 10px;
-}
+/* Buttons */
 
 .btn:hover {
 	cursor: pointer;
+}
+
+#btn-locate {
+	position: absolute;
+    background-color: none;
+	top: 20%;
+	left: 25%;
+	visibility: hidden;
+}
+
+#btn-copy {
+	position: absolute;
+    background-color: none;
+	top: 15%;
+	left: calc(50% - 5vh);
+	visibility: hidden;
+}
+
+#btn-map {
+	position: absolute;
+    background-color: none;
+	top: 20%;
+	left: calc(40% - 5vh);
+	visibility: hidden;
+}
+
+#btn-whatsapp {
+	position: absolute;
+    background-color: none;
+	top: 20%;
+	left: calc(60% - 5vh);
+	visibility: hidden;
+}
+
+.btn-star {
+    color: gold;
+	font-size: 10vh;
+	position: absolute;
+    background-color: none;
+    width: 10vh;
+    height: 10%;
+    z-index:0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.btn-icon {
+    color: black;
+	font-size: 5vh;
+    background-color: none;
+    width: 10vh;
+	top: 2.5vh;
+    position: relative;
+    z-index:1;
 }
