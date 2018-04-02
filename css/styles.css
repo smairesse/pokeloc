@@ -122,14 +122,6 @@ img {
 	cursor: pointer;
 }
 
-#btn-locate {
-	position: absolute;
-    background-color: none;
-	top: 20%;
-	left: 25%;
-	visibility: hidden;
-}
-
 #btn-copy {
 	position: absolute;
     background-color: none;
@@ -142,7 +134,7 @@ img {
 	position: absolute;
     background-color: none;
 	top: 20%;
-	left: 30%;
+	left: 10%;
 	visibility: hidden;
 }
 
@@ -150,7 +142,7 @@ img {
 	position: absolute;
     background-color: none;
 	top: 20%;
-	left: 70%;
+	left: 90%;
 	visibility: hidden;
 }
 
